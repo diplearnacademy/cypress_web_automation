@@ -1,0 +1,19 @@
+{
+  "name": "cy_test",
+  "version": "1.0.0",
+  "description": "Proyecto Base para Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "pom",
+    "automation"
+  ],
+  "author": "Juan Fernandez",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.1"
+  }
+}
