@@ -1,7 +1,7 @@
 /// <reference types="cypress">
 
 describe('Realizar Autenticacion en Saucedemo', () => {
-    it.only('Autenticacion exitosa', () =>{
+    it('Autenticacion exitosa', () =>{
         cy.visit("/")
         cy.get('#user-name').type('standard_user')
         cy.get('[data-test="password"]').type('secret_sauce')
