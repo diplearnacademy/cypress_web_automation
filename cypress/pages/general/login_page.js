@@ -1,12 +1,18 @@
 class LoginPage{
 
+    elements={
+        managerLoginButton : () => cy.get(':nth-child(3) > .btn')
+    }
 
     abrirPagina(){
-        cy.visit("/")
+        beforeEach(()=>{
+            cy.visit("/")
+            cy.title().should('eq', 'XYZ Bank')
+        })
     }
 
     autenticacionManager(){
-        cy.get(':nth-child(3) > .btn').click()
+        this.elements.managerLoginButton().click()
     }
 
 }

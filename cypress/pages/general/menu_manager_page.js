@@ -1,15 +1,13 @@
+import { reemplazarComodin } from '../../utils/elements_transformer';
+
 class MenuManagerPage{
 
-    crearNuevoCliente(){
-        cy.get('[ng-class="btnClass1"]').click()
+    elements={
+        opcionMenu: (opcion) => cy.get(reemplazarComodin('[ng-class="btnClassCOMODIN"]', opcion)),
     }
 
-    abrirCuentaClientes(){
-        cy.get('[ng-class="btnClass2"]').click();
-    }
-
-    verListadoClientes(){
-        cy.get('[ng-class="btnClass3"]').click();
+    seleccionarOpcionMenuPara(opcionElegida) {
+        this.elements.opcionMenu(opcionElegida).click();
     }
 }
 
