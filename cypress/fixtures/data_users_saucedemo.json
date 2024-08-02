@@ -1,0 +1,22 @@
+[
+    {
+        "user": "standard_user",
+        "pass": "secret_sauce"
+    },
+    {
+        "user": "locked_out_user",
+        "pass": "secret_sauce"
+    },
+    {
+        "user": "problem_user",
+        "pass": "secret_sauce"
+    },
+    {
+        "user": "error_user",
+        "pass": "secret_sauce"
+    },
+    {
+        "user": "visual_user",
+        "pass": "secret_sauce"
+    }
+]

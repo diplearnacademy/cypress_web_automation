@@ -8,10 +8,10 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     setupNodeEvents(on, config) {
       
-      const environment = config.env.ENVIRONMENT || 'qa';
+      const environment = config.env.ENVIRONMENT || 'dev';
 
       const envConfig = {
-        dev: "https://www.google.com",
+        dev: "https://www.saucedemo.com/",
         qa: "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login",
         pdn: "https://www.google.com.es"
       }

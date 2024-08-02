@@ -6,7 +6,8 @@ describe('Realizar Autenticacion en Saucedemo', () => {
         cy.get('#user-name').type('standard_user')
         cy.get('[data-test="password"]').type('secret_sauce')
         cy.get('#login-button').click()
-        cy.get('.product_label').should('contain.text', "Products")
+        cy.get('[data-test="title"]').should('contain.text', "Products")
+        
     })
 
     it('Autenticacion Usuario Bloqueado', () =>{
