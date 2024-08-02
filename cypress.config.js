@@ -8,12 +8,12 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     setupNodeEvents(on, config) {
       
-      const environment = config.env.ENVIRONMENT || 'dev';
+      const environment = config.env.ENVIRONMENT || 'pdn';
 
       const envConfig = {
         dev: "https://www.saucedemo.com/",
         qa: "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login",
-        pdn: "https://www.google.com.es"
+        pdn: "https://teststore.automationtesting.co.uk/index.php"
       }
       config.baseUrl = envConfig[environment];
       return config;

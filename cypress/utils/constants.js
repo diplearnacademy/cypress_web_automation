@@ -1,3 +1,3 @@
-export const crearCliente = 1;
-export const agregarCuenta = 2;
-export const listarClientes = 3;
+export const ropa = 3;
+export const accesorios = 6;
+export const arte = 9;

@@ -14,6 +14,7 @@
   "author": "Juan Fernandez",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.13.1"
+    "cypress": "^13.13.1",
+    "cypress-xpath": "^2.0.1"
   }
 }
