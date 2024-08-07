@@ -1,7 +1,7 @@
 class ModalCheckout{
 
     elements={
-        articuloHombre: () => cy.get("#myModalLabel"),
+        articuloHombre: () => cy.get("#myModalLabelad"),
     }
 }
 
