@@ -13,7 +13,7 @@ module.exports = defineConfig({
       const envConfig = {
         dev: "https://www.saucedemo.com/",
         qa: "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login",
-        pdn: "https://teststore.automationtesting.co.uk/index.php"
+        pdn: "https://teststore.automationtesting.co.uk/index.php",
       }
       config.baseUrl = envConfig[environment];
       return config;
