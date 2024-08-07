@@ -1,16 +1,6 @@
-import ropa_hombre_page from '../pages/ropa_hombre_page';
+const ropa_hombre_page = require('../pages/ropa_hombre_page');
 
-class AgregarCarrito{
-
-    constructor(){
-        this.ropaHombrePage = new ropa_hombre_page();
-    }
-
-    articuloAlCarrito(){
-        this.ropaHombrePage.elements.articuloHombre().click()
-        this.ropaHombrePage.elements.agregarCarritoButton().click()
-    }
-
-}
-
-export default AgregarCarrito;
+Cypress.Commands.add("agregarArticuloCarrito", () =>{
+    cy.xpath(ropa_hombre_page.ARTICULO_HOMBRE).click()
+    cy.xpath(ropa_hombre_page.AGREGAR_CARRITO).click()
+})

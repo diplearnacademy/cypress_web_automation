@@ -1,8 +1,1 @@
-class ModalCheckout{
-
-    elements={
-        articuloHombre: () => cy.get("#myModalLabelad"),
-    }
-}
-
-export default ModalCheckout;
+export const ARTICULO_HOMBRE = "#myModalLabel";

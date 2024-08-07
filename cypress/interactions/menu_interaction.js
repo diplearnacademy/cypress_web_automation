@@ -1,24 +1,11 @@
-import home_page from '../pages/home_page';
+const home_page = require('../pages/home_page')
 
-class MenuInteraction{
+Cypress.Commands.add("abrirOpcionParaHombreQueBusca", (opcionMenu) =>{
+    cy.get(home_page.obtenerMenuPagina(opcionMenu)).trigger('mouseover')
+    cy.xpath(home_page.SUBMENU_HOMBRE).click({force: true})
+})
 
-    constructor(){
-        this.homePage = new home_page();
-    }
-
-    conOpcion(opcionMenu){
-        this.homePage.elements.menuPagina(opcionMenu).click()
-    }
-
-    paraHombreQueBusca(opcionMenu){
-        this.homePage.elements.menuPagina(opcionMenu).trigger('mouseover')
-        this.homePage.elements.subMenuHombre().click({force: true})
-    }
-
-    paraMujerQueBusca(opcionMenu){
-        this.homePage.elements.menuPagina(opcionMenu).trigger('mouseover')
-        this.homePage.elements.subMenuMujer().click({force: true})
-    }
-}
-
-export default MenuInteraction;
+Cypress.Commands.add("abrirOpcionParaMujerQueBusca", (opcionMenu) =>{
+    cy.get(home_page.obtenerMenuPagina(opcionMenu)).trigger('mouseover')
+    cy.xpath(home_page.SUBMENU_MUJER).click({force: true})
+})

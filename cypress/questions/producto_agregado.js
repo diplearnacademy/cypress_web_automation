@@ -1,14 +1,5 @@
-import modal_checkout from '../pages/modal_checkout'
+const modal = require('../pages/modal_checkout');
 
-class ProductoAgregado{
-    constructor(){
-        this.modalCheckout = new modal_checkout();
-    }
-
-    deManeraExitosa(){
-        this.modalCheckout.elements.articuloHombre().should("contain.text", "Product successfully added to your shopping cart")
-    }
-
-}
-
-export default ProductoAgregado;
+Cypress.Commands.add("productoAgregadoManeraExitosa", () =>{
+    cy.get(modal.ARTICULO_HOMBRE).should("contain.text", "Product successfully added to your shopping cart")
+})

@@ -1,14 +1,7 @@
 import { reemplazarComodin } from "../utils/elements_transformer";
 
-class HomePage{
-
-    elements={
-        menuPagina: (opcion) => cy.get(reemplazarComodin('#category-COMODIN', opcion)),
-        subMenuHombre: () => cy.xpath("//a[contains(.,'Men')]"),
-        subMenuMujer: () => cy.xpath("//a[contains(.,'Women')]")
-    }
-
+export function obtenerMenuPagina(opcion) {
+    return reemplazarComodin('#category-COMODIN', opcion);
 }
-
-export default HomePage;
-require('cypress-xpath');
+export const SUBMENU_HOMBRE = "//a[contains(.,'Men')]";
+export const SUBMENU_MUJER = "//a[contains(.,'Women')]";
